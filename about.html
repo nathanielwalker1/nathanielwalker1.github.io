@@ -7,32 +7,37 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<a href="index.html" class="back-button">
+<a href="index.html" class="back-button" id="backButton">
     <span class="arrow">&larr;</span> Back
 </a>
-    <div class="header">
-        <h1 class="heading">About</h1>
-    </div>
-    <div class="sub-para">
-        <h2 class="subheading">
-            <span>Born and raised in Hong Kong and the UK. Background in product, marketing and design. Fintech, crypto, consumer apps, social commerce and digital identity are areas I like to explore. Based in NYC. </span>
-
-            <span>email: nathanielwalkera@gmail.com </span>
-            
-            
-            </h2>
-    </div>
-
+<div class="header">
+    <h1 class="heading">About</h1>
+</div>
+<div class="sub-para">
+    <h2 class="subheading">
+        <span>Born and raised in Hong Kong and the UK. Background in product, marketing and design. Fintech, crypto, consumer apps, social commerce and digital identity are areas I like to explore.</span>
+        <p>Based in NYC.</p>
+        <span class="email">➻  nathanielwalkera@gmail.com</span>
+    </h2>
+</div>
 <div class="image-container">
     <img src="images/Bustling HK.png" alt="HK image" class="hk-image"> 
 </div>   
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.style.opacity = 0;
-            setTimeout(function() {
-                document.body.style.opacity = 1;
-            }, 10);
-        });
-        </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.opacity = 0;
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+        }, 10);
+    });
+
+    document.getElementById('backButton').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent immediate navigation
+        document.body.classList.add('fade-out');
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 500); // This should match your transition duration
+    });
+</script>
 </body>
 </html>

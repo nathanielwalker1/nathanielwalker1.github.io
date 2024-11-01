@@ -7,50 +7,45 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
     <div class="content-wrapper">
-<a href="index.html" class="back-button">
-    <span class="arrow">&larr;</span> Back
-</a>
-    <div class="header">
-        <h1 class="heading">Projects</h1>
-    </div>
-    <div class="sub-para">
-        <h2 class="subheading">
-            <span>Startups, designs, ideas and past experiences.</span> 
-
+        <a href="index.html" class="back-button" id="backButton">
+            <span class="arrow">&larr;</span> Back
+        </a>
+        <div class="header">
+            <h1 class="heading">Projects</h1>
+        </div>
+        <div class="sub-para">
+            <h2 class="subheading">
+                <span>Startups, designs, ideas and past experiences.</span> 
             </h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="images/lex.png" alt="Lex">
+            </div>
+            <div class="project-item">
+                <img src="images/CB intern.png" alt="CB-internship">
+            </div>
+            <div class="project-item">
+                <img src="images/Ud intern.png" alt="UD-internship">
+            </div>
+            <div class="project-item">
+                <img src="images/coleman.avif" alt="coleman">
+            </div>
+            <div class="project-item">
+                <img src="images/skej.avif" alt="skej">
+            </div>
+            <div class="project-item">
+                <img src="images/hera.avif" alt="hera">
+            </div>
+            <div class="project-item">
+                <img src="images/haven.avif" alt="haven">
+            </div>
+            <div class="project-item">
+                <img src="images/jazz.avif" alt="jazz">
+            </div>
+        </div> 
     </div>
-
-<div class="project-grid">
-    <div class="project-item">
-        <img src="images/lex.png" alt="Lex">
-    </div>
-    <div class="project-item">
-        <img src="images/CB intern.png" alt="CB-internship">
-    </div>
-    <div class="project-item">
-        <img src="images/Ud intern.png" alt="UD-internship">
-    </div>
-    <div class="project-item">
-        <img src="images/coleman.avif" alt="coleman">
-    </div>
-    <div class="project-item">
-        <img src="images/skej.avif" alt="skej">
-    </div>
-    <div class="project-item">
-        <img src="images/hera.avif" alt="hera">
-    </div>
-    <div class="project-item">
-        <img src="images/haven.avif" alt="haven">
-    </div>
-    <div class="project-item">
-        <img src="images/jazz.avif" alt="jazz">
-    </div>
-
-
-</div> 
-</div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.body.style.opacity = 0;
@@ -58,6 +53,14 @@
                 document.body.style.opacity = 1;
             }, 10);
         });
-        </script>
+
+        document.getElementById('backButton').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent immediate navigation
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 500); // This should match your transition duration
+        });
+    </script>
 </body>
 </html>

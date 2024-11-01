@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #FFFFF2;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,7 +19,7 @@ h1.heading {
 }
 
 .subheading {
-    font-family: 'SF Pro Display';
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 280;
     margin-bottom: 20px;
     line-height: 1.4;
@@ -55,7 +53,7 @@ h1.heading {
     border-radius: 50px;
     color: white;
     padding: 10px 40px;
-    font-family: 'SF Pro Display';
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     border: none;
     font-size: large;
     margin-right: 10px;
@@ -69,7 +67,7 @@ h1.heading {
     border-radius: 50px;
     color: #AE5630;
     padding: 10px 35px;
-    font-family: 'SF Pro Display';
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     border: 2px solid #AE5630;
     font-size: large;
     transition: all 0.3s ease;
@@ -87,7 +85,7 @@ h1.heading {
 }
 
 .btn-about:hover, .btn-projects:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
     box-shadow: 0 4px 8px rgba(174, 86, 48, 0.2);
 }
 
@@ -155,4 +153,18 @@ h1.heading {
 
 .project-item:hover img {
     transform: scale(1.01);
+}
+
+.subheading p {
+    margin-top: 10px; /* Adjust the value as needed for spacing */
+}
+
+.email {
+    color: #A9A9A9; /* Light grey color */
+    /* font-style: italic; Optional: make it italic for a softer look */
+}
+
+.subheading span,
+.subheading p {
+    margin: 5px 0; /* Adjust the value as needed for equal spacing */
 }
